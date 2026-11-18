@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!window.location.hash) {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }
+  initSplashScreen();
   initMobileMenu();
   initCoverflow();
   initDecadalTimeline();
@@ -24,6 +25,65 @@ window.addEventListener('load', () => {
     if (masthead) masthead.style.transform = 'translateY(0)';
   }
 });
+
+/* ==========================================================================
+   MUSEUM ARCHIVAL SPLASH SCREEN
+   ========================================================================== */
+function initSplashScreen() {
+  const splash = document.getElementById('archival-splash');
+  const root = document.documentElement;
+  if (!splash) {
+    root.classList.remove('splash-pending');
+    return;
+  }
+
+  if (window.location.hash || !root.classList.contains('splash-pending')) {
+    root.classList.remove('splash-pending');
+    splash.setAttribute('aria-hidden', 'true');
+    return;
+  }
+
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  let dismissed = false;
+  let autoTimer = null;
+  let cleanupTimer = null;
+
+  function dismissSplash() {
+    if (dismissed) return;
+    dismissed = true;
+    clearTimeout(autoTimer);
+
+    splash.classList.add('is-exiting');
+    splash.setAttribute('aria-hidden', 'true');
+
+    const exitDuration = prefersReduced ? 260 : 650;
+    cleanupTimer = setTimeout(() => {
+      root.classList.remove('splash-pending');
+      splash.classList.remove('is-exiting');
+      if (!window.location.hash) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }
+    }, exitDuration);
+  }
+
+  // Auto-dismiss cleanly after all letters finish revealing
+  autoTimer = setTimeout(dismissSplash, prefersReduced ? 900 : 2450);
+
+  splash.addEventListener('click', dismissSplash, { once: true });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !dismissed) {
+      dismissSplash();
+    }
+  }, { once: true });
+
+  window.addEventListener('pageshow', () => {
+    if (!dismissed && cleanupTimer === null) {
+      setTimeout(dismissSplash, 2800);
+    }
+  }, { once: true });
+}
 
 /* ==========================================================================
    MOBILE NAVIGATION DRAWER

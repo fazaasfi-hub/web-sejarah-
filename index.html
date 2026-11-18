@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script>
       if (!window.location.hash) {
+        document.documentElement.classList.add('splash-pending');
         if ('scrollRestoration' in history) {
           history.scrollRestoration = 'manual';
         }
@@ -20,6 +21,22 @@
     </script>
   </head>
   <body>
+    <!-- MUSEUM ARCHIVAL SPLASH SCREEN -->
+    <div class="archival-splash" id="archival-splash" role="dialog" aria-modal="true" aria-label="Pembuka Arsip Sejarah Cultuurstelsel">
+      <div class="splash-ambient-glow" aria-hidden="true"></div>
+      <div class="splash-content">
+        <span class="splash-kicker">ARSIP SEJARAH DIGITAL · 1830–1870</span>
+
+        <h2 class="splash-title" aria-label="CULTUURSTELSEL">
+          <span class="splash-letter" style="--li: 0;" aria-hidden="true">C</span><span class="splash-letter" style="--li: 1;" aria-hidden="true">U</span><span class="splash-letter" style="--li: 2;" aria-hidden="true">L</span><span class="splash-letter" style="--li: 3;" aria-hidden="true">T</span><span class="splash-letter" style="--li: 4;" aria-hidden="true">U</span><span class="splash-letter" style="--li: 5;" aria-hidden="true">U</span><span class="splash-letter" style="--li: 6;" aria-hidden="true">R</span><span class="splash-letter" style="--li: 7;" aria-hidden="true">S</span><span class="splash-letter" style="--li: 8;" aria-hidden="true">T</span><span class="splash-letter" style="--li: 9;" aria-hidden="true">E</span><span class="splash-letter" style="--li: 10;" aria-hidden="true">L</span><span class="splash-letter" style="--li: 11;" aria-hidden="true">S</span><span class="splash-letter" style="--li: 12;" aria-hidden="true">E</span><span class="splash-letter" style="--li: 13;" aria-hidden="true">L</span>
+        </h2>
+
+        <div class="splash-rule" aria-hidden="true"></div>
+
+        <p class="splash-subtitle">Sistem Tanam Paksa di Indonesia</p>
+      </div>
+    </div>
+
     <!-- ARCHIVAL MASTHEAD (CURATORIAL HEADER) -->
     <header class="archival-masthead">
       <div class="archive-container masthead-inner">

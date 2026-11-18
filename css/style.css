@@ -2313,6 +2313,148 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-light-muted);
 }
 
+/* ==========================================================================
+   MUSEUM ARCHIVAL SPLASH SCREEN
+   ========================================================================== */
+html.splash-pending,
+html.splash-pending body {
+  overflow: hidden;
+  height: 100%;
+}
+
+.archival-splash {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: radial-gradient(circle at 50% 42%, #4A2E1E 0%, #311F15 48%, #22150E 100%);
+  color: var(--text-light);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.splash-pending .archival-splash {
+  display: flex;
+}
+
+.archival-splash.is-exiting {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+.splash-ambient-glow {
+  position: absolute;
+  width: min(80vw, 620px);
+  height: min(80vw, 620px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 180, 153, 0.16) 0%, rgba(90, 55, 36, 0.08) 45%, transparent 72%);
+  pointer-events: none;
+}
+
+.splash-content {
+  position: relative;
+  width: min(100%, 760px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.splash-kicker {
+  font-family: var(--font-mono);
+  font-size: clamp(0.62rem, 1.5vw, 0.76rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold-light);
+  margin-bottom: 1.15rem;
+  animation: splashFadeUp 0.6s 0.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.splash-title {
+  font-family: var(--font-serif-display);
+  font-size: clamp(1.65rem, 6.5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: clamp(0.04em, 0.55vw, 0.12em);
+  line-height: 1.05;
+  color: var(--text-light);
+  margin-bottom: 1.15rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.splash-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.94);
+  filter: blur(4px);
+  animation: splashLetterReveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(var(--li, 0) * 65ms + 160ms);
+  will-change: opacity, transform, filter;
+}
+
+.splash-rule {
+  width: 0;
+  max-width: 240px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent-gold-light) 50%, transparent 100%);
+  margin-bottom: 1.1rem;
+  animation: splashRuleExpand 0.8s 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.splash-subtitle {
+  font-family: var(--font-serif-editorial);
+  font-style: italic;
+  font-size: clamp(0.98rem, 2.2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--accent-gold-light);
+  margin-bottom: 0;
+  animation: splashFadeUp 0.65s 1.05s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes splashLetterReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes splashRuleExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 240px;
+    opacity: 1;
+  }
+}
+
+@keyframes splashFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -2345,6 +2487,24 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .splash-letter,
+  .splash-kicker,
+  .splash-rule,
+  .splash-subtitle {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .splash-rule {
+    width: 200px !important;
+  }
+
+  .archival-splash {
+    transition: opacity 0.25s ease !important;
   }
 }
 
