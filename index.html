@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultuurstelsel — Arsip Sejarah Digital Tanam Paksa</title>
+    <meta name="description" content="Platform arsip sejarah digital interaktif mengenai Sistem Tanam Paksa (Cultuurstelsel) Hindia Belanda di Indonesia (1830–1870)." />
+    <meta property="og:title" content="Cultuurstelsel — Arsip Sejarah Digital Tanam Paksa" />
+    <meta property="og:description" content="Platform arsip sejarah digital interaktif mengenai Sistem Tanam Paksa (Cultuurstelsel) Hindia Belanda di Indonesia (1830–1870)." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+      if (!window.location.hash) {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ARCHIVAL MASTHEAD (CURATORIAL HEADER) -->
+    <header class="archival-masthead">
+      <div class="archive-container masthead-inner">
+        <div class="masthead-brand">
+          <div class="brand-seal" aria-hidden="true">CS</div>
+          <div class="brand-titles">
+            <span class="brand-main">CULTUURSTELSEL</span>
+            <span class="brand-sub">Digital Historical Archive · 1830–1870</span>
+          </div>
+        </div>
+
+        <div class="masthead-center-tag">
+          <span>Hindia Belanda</span>
+          <span class="dot">/</span>
+          <span>Pulau Jawa</span>
+          <span class="dot">/</span>
+          <span>6 Bab Pembahasan</span>
+        </div>
+
+        <div class="masthead-actions">
+          <a href="#coverflow-section" class="masthead-nav-link">Pilihan Bab</a>
+          <a href="#economic-timeline" class="masthead-nav-link">Timeline Ekonomi</a>
+          <a href="#special-components" class="masthead-nav-link">Alur &amp; Tokoh</a>
+          <a href="#coverflow-section" class="btn-archive-primary">Mulai Eksplorasi →</a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Drawer -->
+      <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <a href="#hero">Beranda Atas</a>
+        <a href="#introduction">Pengantar Historis</a>
+        <a href="#coverflow-section">Katalog 6 Bab Tanam Paksa</a>
+        <a href="#economic-timeline">Timeline Interaktif Dampak Ekonomi</a>
+        <a href="#special-components">Rantai Pasok Logistik &amp; Tokoh</a>
+        <a href="bab.html?id=1" class="btn-archive-primary" style="justify-content: center; margin-top: 0.5rem;">Baca Bab 01 Sekarang →</a>
+      </nav>
+    </header>
+
+    <!-- SECTION 01: HERO SECTION -->
+    <section class="hero-editorial-section" id="hero">
+      <div class="hero-background-wrapper">
+        <img
+          src="./assets/images/hero_cultuurstelsel_jawa_1794391767874.jpg"
+          alt="Lanskap Perkebunan Kopi dan Tebu Masa Cultuurstelsel di Jawa"
+          class="hero-background-img"
+          decoding="async"
+        />
+        <div class="hero-overlay-scrim"></div>
+      </div>
+
+      <div class="archive-container hero-editorial-content">
+        <div class="hero-grid">
+          <div class="hero-text-block">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+              <div class="archival-figure-tag">
+                <span class="tag-red-block">DIGITAL ARCHIVE</span>
+                <span class="tag-text">DOKUMEN HISTORIS · SERI AGRARE 1830–1870</span>
+              </div>
+
+              <!-- Interactive Archival Seal Stamp -->
+              <div class="archival-seal-stamp" title="Klik untuk verifikasi arsip">
+                <div class="stamp-inner-ring">
+                  <span class="stamp-verified-text">ANRI · VERIFIED</span>
+                  <span class="stamp-year-badge">1834</span>
+                  <span class="stamp-loc-text">BATAVIA</span>
+                </div>
+                <div class="stamp-tooltip">Arsip Resmi ANRI Seri Cultuur No. 1834/G-12</div>
+              </div>
+            </div>
+
+            <h1 class="hero-main-title">CULTUURSTELSEL</h1>
+
+            <div class="hero-subtitle-bar">
+              <span class="hero-subtitle">Sistem Tanam Paksa di Indonesia (1830–1870)</span>
+              <div class="hero-divider-line"></div>
+            </div>
+
+            <p class="hero-description">
+              "Sebuah kebijakan kolonial yang mengubah tanah, tenaga, dan kehidupan rakyat Indonesia menjadi sumber keuntungan bagi pemerintah Hindia Belanda."
+            </p>
+
+            <div class="hero-metadata-strip">
+              <span>PERIODE: 1830–1870</span>
+              <span class="sep">/</span>
+              <span>TERITORI: HINDIA BELANDA</span>
+              <span class="sep">/</span>
+              <span>KURATORIAL: 6 BAB UTAMA</span>
+              <span class="sep">/</span>
+              <span>SUMBER: ANRI &amp; KITLV</span>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#coverflow-section" class="btn-hero-red">
+                <span>Eksplorasi 6 Bab Arsip</span>
+                <span>→</span>
+              </a>
+              <a href="#economic-timeline" class="btn-hero-outline">
+                <span>Timeline Dampak Ekonomi</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right: Archival Plate Card -->
+          <div class="hero-vignette-plate">
+            <div class="archival-plate-card">
+              <div class="plate-stamp-header">
+                <span>FIG 01 // ARSIP RESMI ANRI</span>
+                <span class="stamp-badge">VERIFIED</span>
+              </div>
+              <div class="archival-plate-img-wrapper">
+                <img
+                  src="./assets/images/van_den_bosch_portrait_1794391769655.jpg"
+                  alt="Potret Johannes van den Bosch"
+                  class="archival-plate-img"
+                  decoding="async"
+                />
+              </div>
+              <p class="plate-caption">
+                Johannes van den Bosch (1780–1844), pencetus Sistem Tanam Paksa yang membalikkan beban utang monarki Belanda ke atas pundak kaum tani pribumi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: INTRODUCTION -->
+    <section class="section-introduction" id="introduction">
+      <div class="archive-container">
+        <div class="intro-editorial-grid">
+          <div class="intro-text-column">
+            <span class="editorial-kicker">PENGANTAR HISTORIS</span>
+            <h2 class="intro-heading">Ketika Tanah Rakyat Menjadi Sumber Keuntungan Kolonial</h2>
+
+            <p class="intro-prose drop-cap">
+              Berakhirnya Perang Jawa atau Perang Diponegoro pada tahun 1830 meninggalkan luka mendalam sekaligus kehancuran finansial total bagi pemerintah kolonial Hindia Belanda. Kas Batavia terkuras lebih dari 20 juta gulden untuk membiayai operasi militer Jenderal De Kock, sementara di Eropa, Kerajaan Belanda terancam pailit akibat pemisahan diri Belgia serta warisan utang VOC sebesar ratusan juta gulden.
+            </p>
+            <p class="intro-prose">
+              Dalam kondisi terjepit itulah, Raja Willem I menunjuk Johannes van den Bosch sebagai Gubernur Jenderal dengan mandat tunggal: memeras tanah jajahan agar menghasilkan keuntungan tunai secepat mungkin. Melalui doktrin agraris yang dikenal sebagai <strong>Cultuurstelsel</strong>, rakyat pedesaan Jawa diwajibkan menyerahkan sebagian tanah sawah mereka dan mencurahkan ratusan hari kerja rodi untuk menanam komoditas ekspor bernilai tinggi di pasar dunia seperti kopi, tebu, dan nila.
+            </p>
+
+            <!-- Vintage Magazine Quote Plate -->
+            <div class="vintage-quote-plate">
+              <div class="plate-corner-ornament top-left"></div>
+              <div class="plate-corner-ornament top-right"></div>
+              <div class="plate-corner-ornament bottom-left"></div>
+              <div class="plate-corner-ornament bottom-right"></div>
+
+              <div class="plate-eyebrow">
+                <span class="plate-eyebrow-tag">DOKUMEN KERAJAAN</span>
+                <span class="plate-eyebrow-source">DEN HAAG · 1829</span>
+              </div>
+
+              <div class="plate-quote-text">
+                "Jawa harus dipaksa memproduksi tanaman ekspor melalui struktur feodal pribumi. Tanah dan tenaga kerja mereka adalah pengganti pajak yang akan menyelamatkan kas Kerajaan Belanda."
+              </div>
+
+              <div class="plate-author-line">
+                <span class="plate-author-name">Johannes van den Bosch</span>
+                <span class="plate-author-role">Memori Rancangan Cultuurstelsel kepada Raja Willem I</span>
+              </div>
+            </div>
+
+            <div class="intro-points-grid">
+              <div class="intro-point-item">
+                <div class="point-number">01</div>
+                <h4 class="point-title">Krisis Finansial Belanda</h4>
+                <p class="point-desc">Beban utang warisan VOC dan biaya Perang Jawa mengancam kelangsungan monarki Belanda.</p>
+              </div>
+              <div class="intro-point-item">
+                <div class="point-number">02</div>
+                <h4 class="point-title">Doktrin Van den Bosch</h4>
+                <p class="point-desc">Memanfaatkan hak feodal tradisional untuk mewajibkan tenaga kerja dan tanah rakyat sebagai pengganti pajak.</p>
+              </div>
+              <div class="intro-point-item">
+                <div class="point-number">03</div>
+                <h4 class="point-title">Komoditas Bernilai Tinggi</h4>
+                <p class="point-desc">Fokus pada kopi, gula tebu, dan nila (indigo) yang mengalami ledakan permintaan akibat Revolusi Industri Eropa.</p>
+              </div>
+              <div class="intro-point-item">
+                <div class="point-number">04</div>
+                <h4 class="point-title">Monopoli Tertutup</h4>
+                <p class="point-desc">Hasil panen dimonopoli maskapai NHM dan langsung disetor ke kas negara Belanda sebagai pos surplus Batig Slot.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-visual-column">
+            <div class="museum-arch-frame">
+              <div class="museum-arch-inner">
+                <img
+                  src="./assets/images/perkebunan_tebu_pabrik_1794391771206.jpg"
+                  alt="Pabrik Gula dan Perkebunan Tebu Jawa Abad ke-19"
+                  class="museum-arch-img"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="archival-caption-box">
+                <span>LITOGRAFI HISTORIS PABRIK GULA JAWA</span>
+                <span>KITLV LEIDEN · CA. 1850</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: CHAPTER SELECTION (3D COVERFLOW CAROUSEL) -->
+    <section class="section-coverflow" id="coverflow-section">
+      <div class="archive-container">
+        <div class="coverflow-header-wrapper">
+          <span class="coverflow-kicker">ARSIP LENGKAP KRONOLOGIS</span>
+          <h2 class="coverflow-main-heading">Menelusuri Sistem Tanam Paksa</h2>
+          <p class="coverflow-subheading">
+            Enam bab untuk memahami kebijakan yang mengubah kehidupan masyarakat Indonesia.
+          </p>
+          <div class="coverflow-gesture-hint">
+            <span>⇄ Geser atau Swipe untuk Memilih Bab</span>
+          </div>
+        </div>
+
+        <!-- 3D Stage Container -->
+        <div class="coverflow-stage-container" id="coverflow-stage">
+          <div class="coverflow-track" id="coverflow-track">
+            <!-- Dynamically populated by js/main.js -->
+          </div>
+        </div>
+
+        <!-- Slide Indicators (Gesture & Swipe Driven) -->
+        <div class="coverflow-controls-row">
+          <div class="coverflow-dots-indicator" id="coverflow-dots">
+            <!-- Dots populated by js/main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: INTERACTIVE DECADAL ECONOMIC TIMELINE -->
+    <section class="section-economic-timeline" id="economic-timeline">
+      <div class="archive-container">
+        <div class="economic-header-wrapper">
+          <div class="archival-figure-tag" style="border-color: var(--border-color); background: var(--bg-secondary);">
+            <span class="tag-red-block">FITUR KHUSUS</span>
+            <span class="tag-text" style="color: var(--text-secondary);">HISTORICAL DATA VISUALIZATION</span>
+          </div>
+          <h2 class="economic-heading">Timeline Interaktif: Dampak Ekonomi per Dekade</h2>
+          <p class="economic-lead-text">
+            Pilihlah dekade di bawah ini untuk mengamati dinamika lonjakan keuntungan kas Kerajaan Belanda (Batig Slot) yang berbanding terbalik secara dramatis dengan intensitas kerja paksa dan krisis pangan di tanah Jawa.
+          </p>
+        </div>
+
+        <!-- Decade Navigation Tabs -->
+        <div class="decade-selector-bar" id="decade-selector-tabs">
+          <!-- Dynamically populated by js/main.js -->
+        </div>
+
+        <!-- Decade Content Container -->
+        <div class="decade-display-box" id="decade-display-box">
+          <!-- Dynamically populated by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: SPECIAL INTERACTIVE COMPONENTS -->
+    <section class="section-special-components" id="special-components">
+      <div class="archive-container">
+        <div style="margin-bottom: 2.5rem;">
+          <span class="editorial-kicker">MEKANISME &amp; KONTROL SISTEM</span>
+          <h2 style="font-size: clamp(2rem, 3.8vw, 3.2rem); margin-bottom: 0.75rem;">Rantai Pasok Kolonial &amp; Para Aktor Sejarah</h2>
+          <p style="color: var(--text-secondary); max-width: 720px; font-size: 1.05rem;">
+            Bagaimana keringat petani di pelosok Jawa bertransformasi menjadi kepingan emas di bursa komoditas Amsterdam melalui birokrasi bupati dan armada dagang NHM.
+          </p>
+        </div>
+
+        <!-- 1. Commodity Flow Chain -->
+        <div style="background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: clamp(1.25rem, 3vw, 2.5rem); margin-bottom: 3.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-size: 1.5rem; font-family: var(--font-serif-display);">Perjalanan Hasil Tanam Paksa (Sawah Menuju Eropa)</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-ink); font-weight: 700;">ALUR LOGISTIK GLOBAL</span>
+          </div>
+
+          <div class="flowchart-editorial-container">
+            <div class="flow-step-card">
+              <span class="step-num">TAHAP 01</span>
+              <h4>Petani Desa</h4>
+              <p>Menyemai bibit tebu, kopi, dan nila di bawah pengawasan aparat desa dan mandor bupati.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step-card">
+              <span class="step-num">TAHAP 02</span>
+              <h4>Penyitaan Sawah</h4>
+              <p>Tanah sawah beririgasi terbaik disita untuk perkebunan kolonial, menggusur tanaman pangan padi.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step-card">
+              <span class="step-num">TAHAP 03</span>
+              <h4>Pabrik Pengolahan</h4>
+              <p>Penggilingan tebu menjadi gula pasir dan perendaman daun nila dengan kerja rodi ribuan buruh.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step-card">
+              <span class="step-num">TAHAP 04</span>
+              <h4>Gudang Karesidenan</h4>
+              <p>Inspeksi mutu dan pemotongan persenan cultuurprocenten bagi para bupati dan residen Belanda.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step-card">
+              <span class="step-num">TAHAP 05</span>
+              <h4>Pelabuhan Batavia</h4>
+              <p>Pemuatan peti-peti komoditas ke kapal dagang bertiang tinggi Nederlandsche Handel-Maatschappij.</p>
+            </div>
+            <div class="flow-arrow" aria-hidden="true">→</div>
+            <div class="flow-step-card highlight-step">
+              <span class="step-num">TAHAP 06</span>
+              <h4>Bursa Amsterdam</h4>
+              <p>Dilelang dengan harga emas; keuntungan Batig Slot melunasi utang nasional Kerajaan Belanda.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Historical Figures Showcase -->
+        <div style="margin-top: 3.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h3 style="font-size: 1.85rem; font-family: var(--font-serif-display);">Aktor-Aktor Kunci di Pusaran Kebijakan</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary);">PROFIL BIOGRAFI HISTORIS</span>
+          </div>
+
+          <div class="figures-grid" id="historical-figures-container">
+            <!-- Dynamically populated by js/main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVAL FOOTER -->
+    <footer class="archival-footer" id="footer">
+      <div class="archive-container">
+        <div class="footer-top-grid">
+          <div class="footer-brand-column">
+            <h3>CULTUURSTELSEL</h3>
+            <p style="margin-bottom: 1.25rem;">
+              Digital Historical Archive — Sistem Tanam Paksa di Indonesia (1830–1870). Platform arsip edukasi kuratorial yang dirancang dengan ketelitian metodologi sejarah dan standar editorial museum.
+            </p>
+            <div class="archival-figure-tag" style="border-color: rgba(255,255,255,0.15);">
+              <span class="tag-red-block">ARSIP-ID</span>
+              <span class="tag-text">ANRI &middot; KITLV &middot; PERPUSNAS</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Daftar Enam Bab</h4>
+            <ul class="footer-links-list">
+              <li><a href="bab.html?id=1">Bab 01 — Latar Belakang (1825–1830)</a></li>
+              <li><a href="bab.html?id=2">Bab 02 — Kebijakan &amp; Aturan Resmi</a></li>
+              <li><a href="bab.html?id=3">Bab 03 — Pelaksanaan &amp; Mekanisme</a></li>
+              <li><a href="bab.html?id=4">Bab 04 — Dampak Nyata di Indonesia</a></li>
+              <li><a href="bab.html?id=5">Bab 05 — Perlawanan Rakyat &amp; Multatuli</a></li>
+              <li><a href="bab.html?id=6">Bab 06 — Penghapusan &amp; Warisan 1870</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Rujukan &amp; Metodologi</h4>
+            <ul class="footer-links-list">
+              <li><a href="#economic-timeline">Analisis Statistik Batig Slot</a></li>
+              <li><a href="#special-components">Mekanisme Logistik NHM</a></li>
+              <li><a href="bab.html?id=2#tabel-komparasi">Tabel Komparasi Aturan vs Realita</a></li>
+              <li><a href="bab.html?id=5#multatuli-havelaar">Transkrip Max Havelaar 1860</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 Cultuurstelsel Digital Historical Archive. Dikembangkan untuk Pelajar &amp; Masyarakat Umum.</div>
+          <div>Berdasarkan Sumber Terverifikasi Arsip Nasional RI (ANRI) &amp; KITLV Leiden.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/chapters.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

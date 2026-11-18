@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bab Pembahasan — Cultuurstelsel Digital Historical Archive</title>
+    <meta name="description" content="Arsip sejarah digital mendalam mengenai Sistem Tanam Paksa (Cultuurstelsel) di Hindia Belanda." />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script>
+      if (!window.location.hash) {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ARCHIVAL MASTHEAD -->
+    <header class="archival-masthead">
+      <div class="archive-container masthead-inner">
+        <div class="masthead-brand">
+          <a href="index.html" class="brand-seal" aria-label="Beranda">CS</a>
+          <div class="brand-titles">
+            <a href="index.html" class="brand-main">CULTUURSTELSEL</a>
+            <span class="brand-sub">Digital Historical Archive · Seri Bab</span>
+          </div>
+        </div>
+
+        <div class="masthead-center-tag">
+          <span id="masthead-current-chapter">Memuat Bab...</span>
+        </div>
+
+        <div class="masthead-actions">
+          <a href="index.html" class="masthead-nav-link">← Beranda Arsip</a>
+          <a href="index.html#coverflow-section" class="masthead-nav-link">Daftar Bab</a>
+          <a href="index.html#economic-timeline" class="masthead-nav-link">Timeline Ekonomi</a>
+        </div>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Drawer -->
+      <nav class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <a href="index.html">← Kembali ke Beranda Utama</a>
+        <a href="index.html#coverflow-section">Pilihan 6 Bab Tanam Paksa</a>
+        <a href="index.html#economic-timeline">Timeline Interaktif Dampak Ekonomi</a>
+        <a href="index.html#special-components">Alur Logistik &amp; Tokoh Sejarah</a>
+      </nav>
+    </header>
+
+    <!-- CHAPTER HERO BANNER -->
+    <section class="chapter-hero-banner" id="chapter-hero">
+      <div class="archive-container">
+        <div class="chapter-hero-grid">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem;">
+              <div class="archival-figure-tag" style="border-color: rgba(255,255,255,0.2); background: rgba(0,0,0,0.5);">
+                <span class="tag-red-block" id="chapter-badge">BAB 01</span>
+                <span class="tag-text" id="chapter-period-tag">1825–1830 · HINDIA BELANDA</span>
+              </div>
+
+              <!-- Interactive Archival Seal Stamp -->
+              <div class="archival-seal-stamp" title="Verifikasi Arsip Nasional RI">
+                <div class="stamp-inner-ring">
+                  <span class="stamp-verified-text">ANRI · VERIFIED</span>
+                  <span class="stamp-year-badge">1834</span>
+                  <span class="stamp-loc-text">BATAVIA</span>
+                </div>
+                <div class="stamp-tooltip">Koleksi Arsip Algemeene Secretarie ANRI</div>
+              </div>
+            </div>
+
+            <div class="chapter-number-large" id="chapter-roman-num">BAB I</div>
+            <h1 class="chapter-main-title" id="chapter-title">Memuat Judul Bab...</h1>
+            <p class="chapter-hero-subtitle" id="chapter-subtitle">Memuat Subjudul...</p>
+            <p class="chapter-hero-summary" id="chapter-summary">Memuat Ringkasan Bab...</p>
+
+            <div class="chapter-hero-meta-row">
+              <span id="chapter-meta-time">12 menit bacaan</span>
+              <span>·</span>
+              <span>SUMBER: ANRI &amp; KITLV</span>
+              <span>·</span>
+              <span>ARSIP DOKUMEN RESMI</span>
+            </div>
+          </div>
+
+          <!-- Hero Image with Frame -->
+          <div>
+            <div class="museum-arch-frame" style="background-color: var(--bg-dark-card); border-color: var(--border-dark);">
+              <div class="museum-arch-inner">
+                <img id="chapter-hero-img" src="" alt="Visual Historis Bab" class="museum-arch-img" />
+              </div>
+              <div class="archival-caption-box" style="border-color: var(--border-dark); color: var(--text-light-muted);">
+                <span id="chapter-hero-caption">Keterangan arsip foto historis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER READING LAYOUT (TOC SIDEBAR + MAIN PROSE) -->
+    <main class="archive-container chapter-reading-layout">
+      <!-- Sticky Table of Contents (Desktop) -->
+      <aside class="chapter-toc-sidebar">
+        <div class="toc-heading">Daftar Isi Bab</div>
+        <ul class="toc-list" id="chapter-toc-list">
+          <!-- Dynamically populated -->
+        </ul>
+
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+          <a href="index.html#coverflow-section" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-ink); font-weight: 700; text-transform: uppercase;">
+            ← Kembali ke Pilihan Bab
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Article Prose -->
+      <article class="chapter-article-column">
+        <!-- Sections Container -->
+        <div id="chapter-sections-container">
+          <!-- Dynamically populated with complete academic text -->
+        </div>
+
+        <!-- Chapter Timeline Module -->
+        <div class="chapter-timeline-box" id="chapter-timeline-box">
+          <div class="timeline-box-title">Kronologi Peristiwa Terkait Bab Ini</div>
+          <div class="chapter-timeline-list" id="chapter-timeline-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Historical Insight Card -->
+        <div class="chapter-insight-container" id="chapter-insight-box">
+          <span class="insight-kicker">ANALISIS HISTORIKAL &amp; KESIMPULAN ARSIP</span>
+          <h3 class="insight-headline" id="chapter-insight-headline">Analisis Kritis</h3>
+          <p class="insight-body" id="chapter-insight-body">Memuat analisis...</p>
+        </div>
+
+        <!-- Sources & Academic References -->
+        <div class="chapter-sources-block">
+          <div class="sources-title">Sumber Primer &amp; Bibliografi Akademik Terverifikasi</div>
+          <ul class="sources-list" id="chapter-sources-list">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+
+        <!-- Chapter Bottom Navigation -->
+        <nav class="chapter-bottom-nav">
+          <a href="#" id="prev-chapter-btn" class="bottom-nav-btn" style="visibility: hidden;">
+            <span class="nav-direction">← Bab Sebelumnya</span>
+            <span class="nav-chapter-title" id="prev-chapter-title">Judul Bab</span>
+          </a>
+
+          <a href="index.html#coverflow-section" class="btn-archive-primary" style="align-self: center;">
+            Katalog 6 Bab
+          </a>
+
+          <a href="#" id="next-chapter-btn" class="bottom-nav-btn" style="visibility: hidden; text-align: right;">
+            <span class="nav-direction">Bab Selanjutnya →</span>
+            <span class="nav-chapter-title" id="next-chapter-title">Judul Bab</span>
+          </a>
+        </nav>
+      </article>
+    </main>
+
+    <!-- Floating Action Button (FAB) for Mobile Table of Contents -->
+    <button class="mobile-toc-fab" id="mobile-toc-fab" aria-label="Buka Daftar Isi Bab">
+      <span aria-hidden="true">📖</span>
+      <span>Daftar Isi</span>
+    </button>
+
+    <!-- Slide-Up Drawer Modal for Mobile Table of Contents -->
+    <div class="mobile-toc-drawer" id="mobile-toc-drawer">
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+      <div class="drawer-panel">
+        <div class="drawer-header">
+          <span class="drawer-title" id="drawer-chapter-title">Daftar Isi Bab</span>
+          <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Tutup Daftar Isi">✕</button>
+        </div>
+        <ul class="toc-list" id="mobile-drawer-toc-list">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="archival-footer">
+      <div class="archive-container footer-bottom-bar">
+        <div>Cultuurstelsel Digital Historical Archive · Arsip Sejarah Tanam Paksa 1830–1870.</div>
+        <div><a href="index.html" style="color: var(--accent-gold-light);">Kembali ke Halaman Utama Beranda</a></div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/chapters.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Mobile Menu Header
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileDrawer = document.getElementById('mobile-nav-drawer');
+        if (mobileToggle && mobileDrawer) {
+          mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileDrawer.classList.toggle('is-open');
+            mobileToggle.classList.toggle('is-active', isOpen);
+          });
+          document.addEventListener('click', (e) => {
+            if (!mobileDrawer.contains(e.target) && !mobileToggle.contains(e.target)) {
+              mobileDrawer.classList.remove('is-open');
+              mobileToggle.classList.remove('is-active');
+            }
+          });
+        }
+
+        // Mobile TOC Drawer Handlers
+        const tocFab = document.getElementById('mobile-toc-fab');
+        const tocDrawer = document.getElementById('mobile-toc-drawer');
+        const drawerClose = document.getElementById('drawer-close-btn');
+        const drawerBackdrop = document.getElementById('drawer-backdrop');
+
+        function openTocDrawer() {
+          if (tocDrawer) tocDrawer.classList.add('is-open');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeTocDrawer() {
+          if (tocDrawer) tocDrawer.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+
+        if (tocFab) tocFab.addEventListener('click', openTocDrawer);
+        if (drawerClose) drawerClose.addEventListener('click', closeTocDrawer);
+        if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeTocDrawer);
+
+        // Parse Chapter ID from URL: bab.html?id=X
+        const urlParams = new URLSearchParams(window.location.search);
+        let chapterId = parseInt(urlParams.get('id'), 10);
+        if (isNaN(chapterId) || chapterId < 1 || chapterId > 6) {
+          chapterId = 1;
+        }
+
+        const chapter = window.CHAPTERS_DATA.find(c => c.id === chapterId);
+        if (!chapter) return;
+
+        // Sync Page Title
+        document.title = `${chapter.roman}: ${chapter.title} — Cultuurstelsel Archive`;
+
+        // Masthead tag
+        document.getElementById('masthead-current-chapter').textContent = `${chapter.roman} · ${chapter.period}`;
+        const drawerTitle = document.getElementById('drawer-chapter-title');
+        if (drawerTitle) drawerTitle.textContent = `${chapter.roman}: DAFTAR ISI`;
+
+        // Populate Hero
+        document.getElementById('chapter-badge').textContent = `BAB ${chapter.number}`;
+        document.getElementById('chapter-period-tag').textContent = `${chapter.period} · HINDIA BELANDA`;
+        document.getElementById('chapter-roman-num').textContent = chapter.roman;
+        document.getElementById('chapter-title').textContent = chapter.title;
+        document.getElementById('chapter-subtitle').textContent = chapter.subtitle;
+        document.getElementById('chapter-summary').textContent = chapter.summary;
+        document.getElementById('chapter-meta-time').textContent = chapter.readingTime;
+
+        const heroImg = document.getElementById('chapter-hero-img');
+        heroImg.src = chapter.heroImage;
+        heroImg.alt = chapter.title;
+        document.getElementById('chapter-hero-caption').textContent = chapter.heroImageCaption;
+
+        // Populate Sections and Table of Contents (Desktop + Mobile Drawer)
+        const tocList = document.getElementById('chapter-toc-list');
+        const mobileTocList = document.getElementById('mobile-drawer-toc-list');
+        const sectionsContainer = document.getElementById('chapter-sections-container');
+        tocList.innerHTML = '';
+        if (mobileTocList) mobileTocList.innerHTML = '';
+        sectionsContainer.innerHTML = '';
+
+        chapter.sections.forEach((sec, idx) => {
+          // Desktop TOC Item
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.className = `toc-link ${idx === 0 ? 'is-active' : ''}`;
+          a.href = `#${sec.id}`;
+          a.textContent = sec.title;
+          li.appendChild(a);
+          tocList.appendChild(li);
+
+          // Mobile Drawer TOC Item
+          if (mobileTocList) {
+            const mLi = document.createElement('li');
+            const mA = document.createElement('a');
+            mA.className = `toc-link ${idx === 0 ? 'is-active' : ''}`;
+            mA.href = `#${sec.id}`;
+            mA.textContent = sec.title;
+            mA.addEventListener('click', () => {
+              closeTocDrawer();
+            });
+            mLi.appendChild(mA);
+            mobileTocList.appendChild(mLi);
+          }
+
+          // Section Block
+          const secBlock = document.createElement('section');
+          secBlock.className = 'article-section-block reveal-on-scroll';
+          secBlock.id = sec.id;
+          secBlock.innerHTML = `
+            <h2 class="article-section-title">${sec.title}</h2>
+            <div class="article-section-content">
+              ${sec.content}
+            </div>
+          `;
+          sectionsContainer.appendChild(secBlock);
+        });
+
+        // Populate Timeline
+        const timelineList = document.getElementById('chapter-timeline-list');
+        timelineList.innerHTML = '';
+        chapter.timeline.forEach((evt, idx) => {
+          const item = document.createElement('div');
+          item.className = 'timeline-event-item reveal-on-scroll';
+          item.style.setProperty('--i', (idx % 4).toString());
+          item.innerHTML = `
+            <span class="event-year-tag">${evt.year}</span>
+            <div class="event-text-desc">${evt.text}</div>
+          `;
+          timelineList.appendChild(item);
+        });
+
+        // Populate Insight
+        document.getElementById('chapter-insight-headline').textContent = chapter.insight.headline;
+        document.getElementById('chapter-insight-body').textContent = chapter.insight.body;
+        document.getElementById('chapter-insight-box')?.classList.add('reveal-on-scroll');
+
+        // Populate Sources
+        const sourcesList = document.getElementById('chapter-sources-list');
+        sourcesList.innerHTML = '';
+        chapter.sources.forEach(src => {
+          const li = document.createElement('li');
+          li.textContent = `• ${src}`;
+          sourcesList.appendChild(li);
+        });
+        document.querySelector('.chapter-sources-block')?.classList.add('reveal-on-scroll');
+        document.querySelector('.chapter-bottom-nav')?.classList.add('reveal-on-scroll');
+
+        // Initialize Scroll Reveal on bab.html
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                obs.unobserve(entry.target);
+              }
+            });
+          }, {
+            root: null,
+            threshold: 0.08,
+            rootMargin: '0px 0px -40px 0px'
+          });
+
+          document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+        } else {
+          document.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('is-revealed'));
+        }
+
+        // Previous and Next Navigation
+        const prevBtn = document.getElementById('prev-chapter-btn');
+        const nextBtn = document.getElementById('next-chapter-btn');
+
+        if (chapterId > 1) {
+          const prevChap = window.CHAPTERS_DATA.find(c => c.id === chapterId - 1);
+          if (prevChap) {
+            prevBtn.href = `bab.html?id=${prevChap.id}`;
+            document.getElementById('prev-chapter-title').textContent = `${prevChap.roman}: ${prevChap.title}`;
+            prevBtn.style.visibility = 'visible';
+          }
+        }
+
+        if (chapterId < 6) {
+          const nextChap = window.CHAPTERS_DATA.find(c => c.id === chapterId + 1);
+          if (nextChap) {
+            nextBtn.href = `bab.html?id=${nextChap.id}`;
+            document.getElementById('next-chapter-title').textContent = `${nextChap.roman}: ${nextChap.title}`;
+            nextBtn.style.visibility = 'visible';
+          }
+        }
+
+        // Scrollspy for TOC (Desktop & Mobile)
+        const sections = document.querySelectorAll('.article-section-block');
+        const allTocLinks = document.querySelectorAll('.toc-link');
+
+        window.addEventListener('scroll', () => {
+          let currentId = '';
+          sections.forEach(sec => {
+            const rect = sec.getBoundingClientRect();
+            if (rect.top <= 160) {
+              currentId = sec.id;
+            }
+          });
+
+          if (currentId) {
+            allTocLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${currentId}`) {
+                link.classList.add('is-active');
+              } else {
+                link.classList.remove('is-active');
+              }
+            });
+          }
+        }, { passive: true });
+      });
+    </script>
+  </body>
+</html>

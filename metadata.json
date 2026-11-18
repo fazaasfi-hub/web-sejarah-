@@ -1,0 +1,6 @@
+{
+  "name": "Cultuurstelsel — Arsip Sejarah Digital Tanam Paksa",
+  "description": "Platform arsip sejarah digital interaktif mengenai Sistem Tanam Paksa (Cultuurstelsel) Hindia Belanda di Indonesia (1830–1870).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
